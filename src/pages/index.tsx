@@ -5,6 +5,9 @@ import { InputLogin, ButtonLogin, ErroLogin, ModalLogin } from "../components";
 
 import ImageMobile from "../assets/background.jpg";
 
+import Axios from "../service/axios";
+import ModelLogin from "../service/model/login";
+
 export default function App() {
   const [email, setEmail] = React.useState<String>("");
   const [password, setPassword] = React.useState<String>("");
@@ -12,10 +15,21 @@ export default function App() {
   const [modal, setModal] = React.useState<boolean>(false);
 
   const validationLogin = () => {
-    if (!email) {
+    if (!email || !password) {
       setError(true);
     } else {
       setModal(true);
+
+      let model = new ModelLogin(email, password);
+      let data = JSON.stringify(model);
+
+      Axios.post("/users", data)
+        .then((response) => {
+            console.log(`Dados salvos com sucesso`);
+        })
+        .catch((error) => {
+            console.log(`Erro ao salvar dados ${error}`);
+        });
     }
   };
 
