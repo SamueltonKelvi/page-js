@@ -16,7 +16,7 @@ export default function App() {
   const [error, setError] = React.useState<boolean>(false);
   const [modal, setModal] = React.useState<boolean>(false);
 
-  const validationLogin = () => {
+  const validationLogin = async () => {
     if (!email || !password) {
       setError(true);
     } else {
@@ -29,12 +29,12 @@ export default function App() {
 
       store.dispatch(actions.log(model));
 
-      Axios.post("/users", data)
+      await Axios.post("/users", data)
         .then((response) => {
           console.log(`Dados salvos com sucesso`);
         })
         .catch((error) => {
-          console.log(`Erro ao salvar dados ${error}`);
+          console.log(`Erro ${error}`);
         });
     }
   };
@@ -49,9 +49,6 @@ export default function App() {
       setData(newBig);
     });
   }, []);
-
-
-  console.log(store);
 
   return (
     <>
