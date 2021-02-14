@@ -1,22 +1,28 @@
 import React from "react";
 import { AppGlobal } from "../styles/AppGlobal";
 import { Container } from "./styles";
-import { InputLogin, ButtonLogin, ErroLogin } from "../components";
+import { InputLogin, ButtonLogin, ErroLogin, ModalLogin } from "../components";
 
 import ImageMobile from "../assets/background.jpg";
+import { setTimeout } from "timers";
 
 export default function App() {
   const [email, setEmail] = React.useState<String>("");
   const [password, setPassword] = React.useState<String>("");
   const [error, setError] = React.useState<boolean>(false);
+  const [modal, setModal] = React.useState<boolean>(false);
 
   const validationLogin = () => {
     if (!email) {
       setError(true);
     }else {
-        //...
+        setModal(true);
     }
   };
+
+  const closeModal = () => {
+      setModal(false);
+  }
 
   return (
     <>
@@ -24,6 +30,7 @@ export default function App() {
       <Container>
         <img className="img-background" src={ImageMobile} alt="Background" />
         <div className="page-gradient">
+            {modal && <ModalLogin title="Usuário logado com sucesso! :)" close={closeModal}/>}
           <div className="page-form">
             <div className="page-form-title">
               <h2>Olá, seja bem-vindo!</h2>
