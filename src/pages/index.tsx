@@ -4,7 +4,6 @@ import { Container } from "./styles";
 import { InputLogin, ButtonLogin, ErroLogin, ModalLogin } from "../components";
 
 import ImageMobile from "../assets/background.jpg";
-import { setTimeout } from "timers";
 
 export default function App() {
   const [email, setEmail] = React.useState<String>("");
