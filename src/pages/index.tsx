@@ -15,14 +15,14 @@ export default function App() {
   const validationLogin = () => {
     if (!email) {
       setError(true);
-    }else {
-        setModal(true);
+    } else {
+      setModal(true);
     }
   };
 
   const closeModal = () => {
-      setModal(false);
-  }
+    setModal(false);
+  };
 
   return (
     <>
@@ -30,7 +30,12 @@ export default function App() {
       <Container>
         <img className="img-background" src={ImageMobile} alt="Background" />
         <div className="page-gradient">
-            {modal && <ModalLogin title="Usuário logado com sucesso! :)" close={closeModal}/>}
+          {modal && (
+            <ModalLogin
+              title="Usuário logado com sucesso! :)"
+              close={closeModal}
+            />
+          )}
           <div className="page-form">
             <div className="page-form-title">
               <h2>Olá, seja bem-vindo!</h2>
