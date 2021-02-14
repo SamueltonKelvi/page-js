@@ -19,6 +19,8 @@ export default function App() {
       setError(true);
     } else {
       setModal(true);
+      setEmail("");
+      setPassword("");
 
       let model = new ModelLogin(email, password);
       let data = JSON.stringify(model);

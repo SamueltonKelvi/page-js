@@ -64,20 +64,21 @@ export const Container = styled.div`
       width: 85%;
       padding-top: 10px;
       margin: 0 8%;
-    }
-    .page-reset {
-      margin: 20px auto;
-      text-align: center;
 
-      span {
-        font-size: 14px;
-        line-height: 20px;
-        color: #989fdb;
-      }
-      a {
-        color: #9626ac;
-        cursor: pointer;
-        text-decoration: underline;
+      .page-reset {
+        margin: 20px auto;
+        text-align: center;
+
+        span {
+          font-size: 14px;
+          line-height: 20px;
+          color: #989fdb;
+        }
+        a {
+          color: #9626ac;
+          cursor: pointer;
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -121,7 +122,7 @@ export const Container = styled.div`
     .page-form {
       display: block;
       position: relative;
-      margin: 60% auto;
+      margin: 50% auto;
       float: none;
       height: 357px;
       width: 310px;
@@ -149,21 +150,38 @@ export const Container = styled.div`
       .page-button {
         width: 85%;
         margin: 8%;
-      }
-      .page-reset {
-        margin: 20px auto;
-        text-align: center;
 
-        span {
-          font-size: 14px;
-          line-height: 20px;
-          color: #989fdb;
+        .page-reset {
+          margin: 20px auto;
+          text-align: center;
+
+          span {
+            font-size: 14px;
+            line-height: 20px;
+            color: #989fdb;
+          }
+          a {
+            color: #9626ac;
+            cursor: pointer;
+            text-decoration: underline;
+          }
         }
-        a {
-          color: #9626ac;
-          cursor: pointer;
-          text-decoration: underline;
-        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    .page-form {
+      margin: 30% 6%;
+      width: 280px;
+
+      .page-inputs {
+        width: 100%;
+        margin: 0 0%;
+      }
+      .page-button {
+        width: 80%;
+        margin: 5% 10%;
       }
     }
   }

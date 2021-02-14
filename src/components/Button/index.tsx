@@ -9,7 +9,7 @@ const Container = styled.button`
   border-radius: 8px;
   background: linear-gradient(267.79deg, #383e71 0%, #9d25b0 99.18%);
   border: none;
-  box-shadow: 0px 10px 20px 0px #CCCCCC;
+  box-shadow: 0px 10px 20px 0px #000000;
 
   label {
     font-weight: 600;
