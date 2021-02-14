@@ -1,7 +1,9 @@
-import FormLogin from './Form';
+import InputLogin from './Input';
 import ButtonLogin from './Button';
+import ErroLogin from './Error';
 
 export {
-    FormLogin,
-    ButtonLogin
+    InputLogin,
+    ButtonLogin,
+    ErroLogin
 }
