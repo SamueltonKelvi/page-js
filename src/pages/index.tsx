@@ -7,8 +7,10 @@ import ImageMobile from "../assets/background.jpg";
 
 import Axios from "../service/axios";
 import ModelLogin from "../service/model/login";
+import { actions, store } from "../service/redux";
 
 export default function App() {
+  const [data, setData] = React.useState<any>([]);
   const [email, setEmail] = React.useState<String>("");
   const [password, setPassword] = React.useState<String>("");
   const [error, setError] = React.useState<boolean>(false);
@@ -25,12 +27,14 @@ export default function App() {
       let model = new ModelLogin(email, password);
       let data = JSON.stringify(model);
 
+      store.dispatch(actions.log(model));
+
       Axios.post("/users", data)
         .then((response) => {
-            console.log(`Dados salvos com sucesso`);
+          console.log(`Dados salvos com sucesso`);
         })
         .catch((error) => {
-            console.log(`Erro ao salvar dados ${error}`);
+          console.log(`Erro ao salvar dados ${error}`);
         });
     }
   };
@@ -38,6 +42,16 @@ export default function App() {
   const closeModal = () => {
     setModal(false);
   };
+
+  React.useEffect(() => {
+    store.subscribe(() => {
+      let newBig = store.getState().toReducers;
+      setData(newBig);
+    });
+  }, []);
+
+
+  console.log(store);
 
   return (
     <>
