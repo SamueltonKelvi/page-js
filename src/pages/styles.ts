@@ -9,11 +9,13 @@ export const Container = styled.div`
   width: 50%;
   height: 100%;
 
-  .img-mobile {
+  .img-background {
+    width: 100%;
     height: auto;
     top: 0;
     z-index: 0;
     position: fixed;
+    resize: both;
   }
   .page-gradient {
     position: absolute;
@@ -24,9 +26,9 @@ export const Container = styled.div`
     width: 100%;
     height: 100%;
     background: linear-gradient(
-      0deg,
-      #130525 30%,
-      rgba(105, 57, 153, 0.5) 100%
+      10deg,
+      #130525 10%,
+      rgba(105, 57, 153, 0.2) 100%
     );
   }
   .page-form {
@@ -80,9 +82,89 @@ export const Container = styled.div`
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1160px) {
+    .img-background {
+      width: 100%;
+      height: 100%;
+      resize: vertical;
+      background-origin: content-box;
+    }
+    .page-gradient {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        10deg,
+        #130525 10%,
+        rgba(105, 57, 153, 0.2) 100%
+      );
+    }
+    .page-form .page-form-title {
+      margin: 0% 15%;
+    }
+    .page-form .page-inputs {
+      width: 80%;
+      margin: 0 10%;
+    }
   }
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 480px) {
+    .img-background {
+      width: 800px;
+      height: auto;
+      resize: vertical;
+      background-origin: content-box;
+    }
+    .page-gradient {
+      width: 100%;
+      height: 100%;
+    }
+    .page-form {
+      display: block;
+      position: relative;
+      margin: 60% auto;
+      float: none;
+      height: 357px;
+      width: 310px;
+      border-radius: 8px;
+
+      .page-form-title {
+        margin: 0 5%;
+        text-align: center;
+
+        h2 {
+          font-size: 24px;
+          line-height: 32px;
+          padding-top: 20px;
+          margin: 10px 40px;
+        }
+        span {
+          line-height: 20px;
+          font-size: 12px;
+        }
+      }
+      .page-inputs {
+        width: 90%;
+        margin: 0 5%;
+      }
+      .page-button {
+        width: 85%;
+        margin: 8%;
+      }
+      .page-reset {
+        margin: 20px auto;
+        text-align: center;
+
+        span {
+          font-size: 14px;
+          line-height: 20px;
+          color: #989fdb;
+        }
+        a {
+          color: #9626ac;
+          cursor: pointer;
+          text-decoration: underline;
+        }
+      }
+    }
   }
 `;

@@ -3,7 +3,7 @@ import { AppGlobal } from "../styles/AppGlobal";
 import { Container } from "./styles";
 import { InputLogin, ButtonLogin, ErroLogin } from "../components";
 
-import ImageMobile from "../assets/background_mobile.jpg";
+import ImageMobile from "../assets/background.jpg";
 
 export default function App() {
   const [email, setEmail] = React.useState<String>("");
@@ -13,6 +13,8 @@ export default function App() {
   const validationLogin = () => {
     if (!email) {
       setError(true);
+    }else {
+        //...
     }
   };
 
@@ -20,7 +22,7 @@ export default function App() {
     <>
       <AppGlobal />
       <Container>
-        <img className="img-mobile" src={ImageMobile} alt="Background" />
+        <img className="img-background" src={ImageMobile} alt="Background" />
         <div className="page-gradient">
           <div className="page-form">
             <div className="page-form-title">
