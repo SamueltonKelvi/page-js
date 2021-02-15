@@ -1,3 +1,14 @@
+# Application developed following the required design standard
+
+## Technologies involved:
+- React JS
+- TypeScript
+- Redux
+- Styled Components and CSS
+- Axios
+
+All the necessary dependencies for the application flow in routes and integration were installed and updated using the command line via npm.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
