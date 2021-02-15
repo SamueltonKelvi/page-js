@@ -9,6 +9,13 @@
 
 All the necessary dependencies for the application flow in routes and integration were installed and updated using the command line via npm.
 
+# Current Branch
+
+- Main
+- Dev
+
+All changes and commits are present in the two branches, however the development of the application was kept in the branch dev and others in order to avoid errors and keep the code organized.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
