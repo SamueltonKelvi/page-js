@@ -7,7 +7,8 @@
 - Styled Components and CSS
 - Axios
 
-All the necessary dependencies for the application flow in routes and integration were installed and updated using the command line via npm.
+All the necessary dependencies for the application flow in the routes and integration were installed and updated through the command line via npm.
+All programming was based on continuous testing to make the application responsive to Moble, Tablet and Desktop devices.
 
 # Current Branch
 
@@ -15,6 +16,12 @@ All the necessary dependencies for the application flow in routes and integratio
 - Dev
 
 All changes and commits are present in the two branches, however the development of the application was kept in the branch dev and others in order to avoid errors and keep the code organized.
+
+# API integration
+
+- Mockapi.io
+
+To perform a login test, this platform was used to save the data by simulating a physical API, where, thus, the axioscom as connection bridge was used.
 
 # Getting Started with Create React App
 
